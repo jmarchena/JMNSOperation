@@ -1,7 +1,3 @@
-//
-//  AppDelegate.swift
-//  JMNSOperation
-//
 //  Created by Jose Marchena Torres on 14/03/16.
 //  Copyright © 2016 Jose Marchena Torres. All rights reserved.
 //
@@ -13,9 +9,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let viewController: UIViewController = UIViewController()
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        self.window?.rootViewController = viewController
+        
+        self.window!.backgroundColor = UIColor.whiteColor()
+        
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
 
