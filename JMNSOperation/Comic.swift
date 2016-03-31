@@ -9,14 +9,12 @@ public struct BasicComic {
     private let uri: String?
     
     public var comicID: Int? {
-        get {
-            guard let uri = uri else { return nil }
-            
-            if let comicID = extractComicIDFromURI(uri) {
-                return comicID
-            } else {
-                return nil;
-            }
+        guard let uri = uri else { return nil }
+        
+        if let comicID = extractComicIDFromURI(uri) {
+            return comicID
+        } else {
+            return nil;
         }
     }
 }
